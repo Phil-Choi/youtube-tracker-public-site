@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="YouTube Tracker는 등록된 YouTube 채널의 새 영상을 확인하고 Gmail로 알림을 보내는 ePartners의 개인 자동화 도구입니다."
+    />
+    <title>YouTube Tracker | ePartners</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="YouTube Tracker 홈">
+        <span class="brand-mark" aria-hidden="true">YT</span>
+        <span>YouTube Tracker</span>
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="#how-it-works">작동 방식</a>
+        <a href="/privacy/">개인정보처리방침</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">ePartners 개인 자동화 도구</p>
+        <h1>놓치고 싶지 않은<br />YouTube 새 영상 알림</h1>
+        <p class="lede">
+          등록된 채널의 공개 RSS를 매일 확인하고, 새 영상이 있을 때만
+          지정된 수신자에게 Gmail 알림을 보냅니다.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#how-it-works">작동 방식 보기</a>
+          <a class="button secondary" href="/privacy/">데이터 사용 확인</a>
+        </div>
+        <dl class="facts" aria-label="서비스 주요 정보">
+          <div>
+            <dt>실행 시각</dt>
+            <dd>매일 오전 7시</dd>
+          </div>
+          <div>
+            <dt>기준 시간대</dt>
+            <dd>Pacific/Auckland</dd>
+          </div>
+          <div>
+            <dt>알림 조건</dt>
+            <dd>새 영상이 있을 때만</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="section-heading">
+          <p class="eyebrow">작동 방식</p>
+          <h2>단순하고 중복 없이</h2>
+          <p>공개된 영상 정보만 확인하고, Gmail은 발송 기능에만 사용합니다.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-number">01</span>
+            <h3>채널 목록 확인</h3>
+            <p>Google Sheets에 관리자가 등록한 활성 채널과 수신자를 불러옵니다.</p>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <h3>공개 RSS 조회</h3>
+            <p>YouTube 공개 RSS에서 일반 영상, Shorts 및 노출된 라이브 항목을 확인합니다.</p>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <h3>신규 여부 확인</h3>
+            <p>영상 ID와 수신자를 기준으로 이전 발송 이력을 확인해 중복을 방지합니다.</p>
+          </li>
+          <li>
+            <span class="step-number">04</span>
+            <h3>Gmail 알림 발송</h3>
+            <p>새 영상이 있을 때만 Gmail API의 발송 권한으로 안내 메일을 보냅니다.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section trust">
+        <div>
+          <p class="eyebrow">데이터 보호</p>
+          <h2>필요한 권한만 사용합니다</h2>
+        </div>
+        <div class="trust-copy">
+          <p>
+            YouTube Tracker는 Gmail 받은편지함, 연락처 또는 메일 내용을 읽거나
+            삭제하지 않습니다. Google OAuth 권한은 새 영상 알림 메일을 보내는
+            목적으로만 사용합니다.
+          </p>
+          <p>
+            OAuth 인증정보는 Google Cloud Secret Manager에 보관하며, 발송 이력은
+            Firestore에서 중복 방지와 장애 확인 목적으로 관리합니다.
+          </p>
+          <a class="text-link" href="/privacy/">개인정보처리방침 전문 보기 →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 ePartners · YouTube Tracker</p>
+      <div>
+        <a href="mailto:pendulum.choi@gmail.com">문의</a>
+        <a href="/privacy/">개인정보처리방침</a>
+      </div>
+    </footer>
+  </body>
+</html>

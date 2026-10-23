@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="YouTube Tracker의 Google 사용자 데이터 접근, 사용, 저장 및 공유 방식을 설명하는 개인정보처리방침입니다."
+    />
+    <title>개인정보처리방침 | YouTube Tracker</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="YouTube Tracker 홈">
+        <span class="brand-mark" aria-hidden="true">YT</span>
+        <span>YouTube Tracker</span>
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="/">홈</a>
+        <a aria-current="page" href="/privacy/">개인정보처리방침</a>
+      </nav>
+    </header>
+
+    <main class="policy-shell">
+      <article class="policy">
+        <header>
+          <p class="eyebrow">YouTube Tracker</p>
+          <h1>개인정보처리방침</h1>
+          <p class="policy-date">시행일: 2026년 10월 23일</p>
+        </header>
+
+        <section>
+          <h2>1. 운영자 및 적용 범위</h2>
+          <p>
+            YouTube Tracker는 Phil Choi / ePartners가 운영하는 개인 자동화 도구입니다.
+            이 방침은 YouTube Tracker가 Google API를 통해 접근하거나 처리하는 정보와
+            서비스 운영 중 생성되는 관련 기록에 적용됩니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. 접근하는 정보</h2>
+          <ul>
+            <li>Google OAuth 인증정보와 Gmail 발송 권한(<code>gmail.send</code>)</li>
+            <li>발신 Gmail 주소와 관리자가 지정한 수신 이메일 주소</li>
+            <li>YouTube 채널 ID·채널명 및 공개 RSS의 영상 ID·제목·URL·게시 시각</li>
+            <li>메일 발송 상태, 발송 시각 및 Gmail 메시지 ID</li>
+            <li>장애 진단에 필요한 제한적인 실행 로그와 모니터링 정보</li>
+          </ul>
+          <p>
+            YouTube Tracker는 Gmail 받은편지함, 연락처 또는 기존 메일 내용을 읽거나
+            수정·삭제하지 않습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>3. 정보 사용 목적</h2>
+          <p>수집·처리되는 정보는 다음 목적에만 사용됩니다.</p>
+          <ul>
+            <li>등록된 YouTube 채널의 새 영상 알림 메일 발송</li>
+            <li>동일한 영상 알림의 중복 발송 방지</li>
+            <li>발송 결과 확인, 오류 진단 및 서비스 보안 유지</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. 저장 및 보호</h2>
+          <p>
+            OAuth 토큰은 Google Cloud Secret Manager에 저장됩니다. 채널·영상·수신자별
+            발송 이력은 Google Cloud Firestore에 저장되며, 실행 로그와 장애 정보는
+            Google Cloud Logging 및 Monitoring에서 처리됩니다. 접근 권한은 서비스 운영에
+            필요한 계정과 서비스 계정으로 제한됩니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. 공유 및 판매</h2>
+          <p>
+            Google 사용자 데이터는 판매하거나 광고에 사용하지 않습니다. 서비스 제공에
+            필요한 Google Cloud와 Gmail API 처리 외에는 제3자와 공유하지 않습니다.
+            공개 웹페이지는 Vercel에서 호스팅되므로 접속 시 일반적인 요청 로그 등 기술
+            정보가 Vercel의 방침에 따라 처리될 수 있습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. 보유 기간 및 삭제</h2>
+          <p>
+            OAuth 인증정보는 권한이 철회되거나 서비스 운영이 종료될 때까지 보관합니다.
+            발송 이력은 중복 발송 방지와 장애 확인에 필요한 기간 동안 보관합니다. 정보
+            삭제를 요청하면 법률 또는 보안상 보존이 필요한 경우를 제외하고 관련 정보를
+            삭제합니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. 권한 철회 및 삭제 요청</h2>
+          <p>
+            Google 계정의
+            <a href="https://myaccount.google.com/permissions" rel="noreferrer">서드 파티 앱 및 서비스</a>
+            페이지에서 YouTube Tracker의 접근 권한을 언제든지 철회할 수 있습니다.
+            데이터 열람 또는 삭제 요청은
+            <a href="mailto:pendulum.choi@gmail.com">pendulum.choi@gmail.com</a>으로 보내 주세요.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Google API 제한적 사용</h2>
+          <p>
+            YouTube Tracker가 Google API에서 받은 정보를 사용하고 다른 앱으로 전송하는
+            방식은 Google API Services User Data Policy와 Limited Use 요구사항을 준수합니다.
+            자세한 내용은
+            <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noreferrer">
+              Google API Services User Data Policy
+            </a>를 참고해 주세요.
+          </p>
+        </section>
+
+        <section>
+          <h2>9. 방침 변경</h2>
+          <p>
+            데이터 처리 방식이 변경되면 이 페이지를 갱신하고 시행일을 수정합니다.
+            중요한 변경이 있는 경우 서비스 이용자에게 적절한 방법으로 알립니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>10. 문의</h2>
+          <p>
+            운영자: Phil Choi / ePartners<br />
+            이메일: <a href="mailto:pendulum.choi@gmail.com">pendulum.choi@gmail.com</a>
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>© 2026 ePartners · YouTube Tracker</p>
+      <div>
+        <a href="/">홈</a>
+        <a href="mailto:pendulum.choi@gmail.com">문의</a>
+      </div>
+    </footer>
+  </body>
+</html>
